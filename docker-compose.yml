@@ -1,0 +1,36 @@
+version: '3'
+services:
+  python-script:
+    build:
+      context: .
+    depends_on:
+      - grafana
+      - influxdb
+    networks:
+      - backend
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+
+  influxdb:
+    image: influxdb:1.8
+    volumes:
+      - influxdb-data:/var/lib/influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      - INFLUXDB_DB=mydb
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=adminpassword
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  influxdb-data:

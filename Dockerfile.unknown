@@ -1,0 +1,11 @@
+# Usa la imagen oficial de Python
+FROM python:3.8
+
+# Instala las dependencias del script
+RUN pip install requests influxdb
+
+# Copia el script al contenedor
+COPY script.py /script.py
+
+# Define el comando que se ejecutará al iniciar el contenedor
+CMD python3 /script.py && tail -f /dev/null
