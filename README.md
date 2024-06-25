@@ -13,11 +13,6 @@ This project focuses on the integration and automation of data extraction from t
     - [Storage in InfluxDB](#storage-in-influxdb)
     - [Integration with Grafana](#integration-with-grafana)
 5. [Visualization in Grafana](#visualization-in-grafana)
-    - [Dashboard Creation](#dashboard-creation)
-    - [Graph 1: Number of New Characters per Year](#graph-1-number-of-new-characters-per-year)
-    - [Graph 2: Comics Published in 2024 by Writers](#graph-2-comics-published-in-2024-by-writers)
-    - [Graph 3: Number of Characters in Important Events](#graph-3-number-of-characters-in-important-events)
-    - [Graph 4: Available Comics of a List of Characters](#graph-4-available-comics-of-a-list-of-characters)
 6. [Conclusions](#conclusions)
 7. [References](#references)
 
